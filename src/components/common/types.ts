@@ -1,4 +1,3 @@
-import {type} from 'os';
 import {Film} from '../Films/types';
 import {Planet} from '../Planets/types';
 import {Species} from '../Species/types';
