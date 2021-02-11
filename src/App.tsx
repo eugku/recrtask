@@ -14,8 +14,6 @@ import Navbar from './components/Navbar';
 import {PeopleList} from './components/People/PeopleList';
 import {PlanetsList} from './components/Planets/PlanetsList';
 import {SpeciessList} from './components/Species/SpeciesList';
-import {StarshipsList} from './components/Starships/StarshipList';
-import {VehiclesList} from './components/Vehicles/VehicleList';
 
 function App() {
   return (
@@ -45,16 +43,6 @@ function App() {
               exact
               render={(props) => <Details {...props} apiNode="species" />}
             ></Route>
-            <Route
-              path="/starships/:name"
-              exact
-              render={(props) => <Details {...props} apiNode="starships" />}
-            ></Route>
-            <Route
-              path="/vehicles/:name"
-              exact
-              render={(props) => <Details {...props} apiNode="vehicles" />}
-            ></Route>
             <Route path="/people" exact>
               <PeopleList />
             </Route>
@@ -63,12 +51,6 @@ function App() {
             </Route>
             <Route path="/films" exact>
               <FilmsList />
-            </Route>
-            <Route path="/starships" exact>
-              <StarshipsList />
-            </Route>
-            <Route path="/vehicles" exact>
-              <VehiclesList />
             </Route>
             <Route path="/species" exact>
               <SpeciessList />

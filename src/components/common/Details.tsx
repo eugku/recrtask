@@ -13,12 +13,8 @@ import SpeciesPage from '../Species/SpeciesPage';
 import {Planet} from '../Planets/types';
 import {Film} from '../Films/types';
 import FilmCard from '../Films/FilmCard';
-import StarshipCard from '../Starships/StarshipCard';
-import VehicleCard from '../Vehicles/VehicleCard';
 import SpeciesCard from '../Species/SpeciesCard';
 import {Species} from '../Species/types';
-import {Vehicle} from '../Vehicles/types';
-import {Starship} from '../Starships/types';
 
 interface RouteInfo extends RouteProps {
   params: {
@@ -64,14 +60,6 @@ export default function Details({
           {apiNode === 'films' &&
             results.results.map((result: Film) => {
               return <FilmCard key={result.title} film={result} />;
-            })}
-          {apiNode === 'starships' &&
-            results.results.map((result: Starship) => {
-              return <StarshipCard key={result.name} starship={result} />;
-            })}
-          {apiNode === 'vehicles' &&
-            results.results.map((result: Vehicle) => {
-              return <VehicleCard key={result.name} vehicle={result} />;
             })}
           {apiNode === 'species' &&
             results.results.map((result: Species) => {
